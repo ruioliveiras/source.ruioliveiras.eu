@@ -1,0 +1,3 @@
+[submodule "www/ruioliveiras.bitbucket.org"]
+	path = www/ruioliveiras.bitbucket.org
+	url = git@bitbucket.org:ruioliveiras/ruioliveiras.bitbucket.org.git
