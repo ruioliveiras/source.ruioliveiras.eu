@@ -1,0 +1,1 @@
+sh -c 'echo "serving at: http://localhost:9000/"; nohup harp server &> /dev/null'

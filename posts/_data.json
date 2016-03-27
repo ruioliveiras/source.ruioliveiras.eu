@@ -1,0 +1,23 @@
+{
+  "scala-tutorial-laboratory-1": {
+    "title": "Scala Language Laboratory",
+    "date": "March 2016",
+    "brief": "The description of the test post",
+    "tags": ["scala", "lab"],
+    "category": "programming"
+  },
+  "scala-tutorial-base": {
+    "title": "Scala Language Tutorial",
+    "date": "March 2016",
+    "brief": "This ",
+    "tags": ["scala", "tutorial"],
+    "category": "programming"
+  },    
+  "first-post": {
+    "title": "This is a expirimental post",
+    "date": "March 2016",
+    "brief": "The description of my first expirimental test post",
+    "tags": ["tutorial"],
+    "category": "programming"
+  }
+}

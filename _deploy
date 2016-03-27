@@ -1,0 +1,1 @@
+sh -c 'harp compile ; cd ../ruioliveiras.bitbucket.org; git add -A ; git commit -m "deploy at $(date)" ; git push origin master'

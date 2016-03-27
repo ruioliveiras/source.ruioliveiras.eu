@@ -1,0 +1,59 @@
+@import "_paramters.less";
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: @ros-font;
+}
+
+/*  ##############################################
+ *            headers  (h1,h2,h3,h4,h5)
+ *  ##############################################
+*/
+h1 {
+    &:extend(h2);
+    text-align: center;
+}
+
+h2 {
+    &:extend(h3);
+    text-align: center;    
+}
+
+h3 {
+    &:extend(h4);
+}
+
+h4 {
+    &:extend(h5);
+}
+
+h5 {
+    font-family: @ros-title-font;
+}
+
+/*  ##############################################
+ *            side bar
+ *  ##############################################
+*/
+.ros-sidebar{
+    @media(min-width: 48em){
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+    h1 {
+        font-family: @ros-blog-title-font;    
+    };
+    h2 {
+        font-family: @ros-font;       
+    }
+}
+
+.ros-content {
+    @media(min-width: 48em){
+        margin-left: 25%;
+    }
+    padding: 2em 3em 0; 
+    box-sizing: border-box;
+    max-width: 50em;
+}
