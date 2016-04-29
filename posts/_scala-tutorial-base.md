@@ -11,45 +11,14 @@ http://lampwww.epfl.ch/~michelou/scala/using-scala-from-java.html
 
 #### Me and Scala
 
-I'm recent scala developer, started programing in scala in november of 2015. 
+I'm recent scala developer, started programming in scala in November of 2015, I'm not an expert, but I think I'm good enough to help you understand scala.
 
-Scala has the goods of of all paradigms Objects, Functional, Scripting.
+## Introduction
+I start with some generic concepts ([Mutability and Immutability](#mutability-ummitability) and [Singleton object](#singleton)) that are not specific of the scala language.
 
-## Summary
+Next, I have separated the main features in 3 Charters:  [Scala as a Object Oriented Language](#scala-oo), [Scala as a Functional language](#scala-functional), [Scala as a Script language](#scala-script). Where I have put syntax features in the Script chapter.
 
-
-1. [Concepts](#concepts)
-  * [Mutability and Immutability](#mutability-ummitability)
-  * [Singleton object](#singleton)
-1. [Scala as a Object Oriented Language](#scala-oo)
-  * [Objects and Class](#objects-class)
-  * [Traits](#traits)
-  * [Case Class](#case-class)
-  * [Trait and Extension](#generic-class)
-  * [Generic Class](#generic-class)
-1. [Scala as a Functional language](#scala-functional)
-  * [Var and Val](#var-val)
-  * [Higter order functions](#higter-order)
-  * [Collections functions](#collections-functions)
-  * [Implicit Variable](#-implicit-variable)
-  * [Implicit Method](#-implicit-method)
-  * [Implicit Class](#-implicit-class)
-1. [Scala as a Script language](#scala-script)
-  * [Type Inference](#type-inference)
-  * [Syntax Sugar](#syntax-sugar) - map({}) don't, need return code block {} etc
-  * []
-1. [Scala as a cool language](#scala-cool)
-  * [Scala Concurrency](#scala-concurrency)
-    * [Futures and Promises](#futures-promises)
-    * [@todo: add topics here](#todo)
-  * [Scala Reflection](#scala-reflection)
-    * [Universe](#universe)
-    * [Add something here](#todo2)
-  * [Scala Macros](#scala-macros)
-    * [Whitebox and blackbox macros](#whitebox-blackbox)
-    * [Annotations Macros](#annotations-macros)
-  * [Scala XML](#scala-xml)
-  * [Scala String Processing](#scala-string)
+I the end I also some other topic, Reflection and Macros - this two things are still currently in experimental, but they are very cool and usable; Concurrency  which in Scala is very intuitive; Native XML scala feature; and some notes about string processing. 
 
 <a name="concepts"></a>
 ## Concepts
@@ -63,13 +32,13 @@ But where in Scala they are more used or has more importance.
 
 Immutability is one of pillars of a functional language.
 
-** Mutable variable ** its state can change with the time.
+** Mutable variable ** its state can change over time.
 
-** Immutable variable ** its state can't change with the time.
+** Immutable variable ** its state can't change over time.
 
 Immutability advantages
   * Is very good for concurrency (many threads changing the value of one variable at same time may be dangerous )
-  * Turn your code more clean
+  * Code more clean
 
 Immutability disadvantages
   * May be  costly to be recreating objects on each change
@@ -78,8 +47,10 @@ Immutability disadvantages
 ### Singleton object
 
 Singleton objects are unique at the runtime. There will not exist at same time two instances of this objects types.
-In Java there are the static keyword that puts the method or the variable into the singleton object of the class.
-But in Scala there the classes don't have a singleton object.
+
+In Java a class have its static scope, where are the declared static methods and variables. The static scope of the class are a built-in singleton object
+
+But in Scala there aren't the keyword static.
 Instead there are classes and singleton objects, they are managed differently.
 
 
@@ -92,7 +63,7 @@ In Scala we can do everything that we can do in JAVA.
 ### Objects and Class
 
 **Class**: is equivalent to Java. 
-~~~~
+~~~~scala
 // declaring
 class Example(favoriteNumber:Int, name:String) {
     private val dadFavoriteNumber:Int = favoriteNumber * 2
@@ -103,13 +74,14 @@ new Example(1, "ruiOliveira").dadNumber()
 ~~~~
 
 **Object**: is a tool that can be used in different situations.
-One of the used situations is to work has a singleton
+One used situation is to work has a singleton
 (in the nested class and object you will see that not all objects are singleton)
 
-~~~~~
+~~~~~scala
+// a class
 class Example(favoriteNumber:Int, name:String) { ... }
 
-// declaring object
+// a singleton object
 object Example{
     var counter:Int = 10
     def counterPlusOne():Int ={ counter += 1; counter }  
@@ -130,7 +102,7 @@ Note that traits are a conceptual thing resolver by the scala compiler in-lining
 **Trait example**
 
 Who uses this trait must declare a value name, and will have the remaining stuff for free.
-~~~~~
+~~~~~scala
 trait Person{
     val name:String;
     var nameCounter = 0
@@ -148,7 +120,7 @@ def testTraitPerson(p:Person):Int = p.howManyTimesNameWasCalled()
 ~~~~~ 
 
 **Object using a Trait**, note that we are defining name value.
-~~~~~
+~~~~~scala
 object RuiOliveira extends Person{
     val name = "rui Oliveira";
 }
@@ -158,7 +130,7 @@ testTraitPerson(RuiOliveira)
 Has you can see a object is a variable that uses Person so it can be used in the testTraitPerson
 
 **Class using a trait**, note that we are declaring value name in the parameters now.
-~~~~~
+~~~~~scala
 class OtherPerson(val name:String) extends Person
 
 val p = new OtherPerson('pedro')
@@ -168,9 +140,9 @@ testTraitPerson(p)
 Has was expected we can use traits in class's
 
 
-**Trait on variable**. The class Dog don't use the trait Person, but even so we can create a variable with that implementing what is need. 
+**Trait on variable**. (Anonymous declaration) The class Dog don't use the trait Person, even so we can create a variable with that implementing what is needed. 
 
-~~~~
+~~~~scala
 class Dog(val dogName:String)
 
 val p = new Dog("doggy") with Person {
@@ -183,7 +155,7 @@ testTraitPerson(p)
 ### Case Class
 
 Case class are a "modification" to normal classes
-~~~~~
+~~~~~scala
 // normal class
 class Onwer( name:String)
 class Phone( number:String,  owner:Onwer)
@@ -223,7 +195,7 @@ Var and Val keyword can be used to declare objects or in class parameter.
 **var** stands for variable
 **val** stands for value
 
-~~~~ 
+~~~~scala
 var counter = 1;
 val max = 100;
 
@@ -237,7 +209,7 @@ On this example counter variable are being setted multiple times. While if you t
 
 Usage on as a class parameter:
 
-~~~~
+~~~~scala
 class Person(val name:String, var age:Int) {
   def doBirthdate:Unit = age += 1;
 }
@@ -247,7 +219,7 @@ The parameter name will never got changed while age can be changed.
 
 Var and Val with class types
 
-~~~~
+~~~~scala
 class Club(val peopleList:List[Person], val owner:Person)
 ~~~~
 
@@ -259,8 +231,22 @@ We say that a class is Immutable when all the parameters are 'val' and all the p
 <a name="higter-order"></a>
 ### Lambda functions
 
-WARNING: Not writed yet
-TODO: write this topic.
+The syntax to create a lambda function are:
+
+~~~~scala
+val f = (x:Int) => x*2
+f(2) 
+// will give 4
+~~~~
+
+We can receive function as parameter
+
+~~~~scala
+val op1 = (x:Int, y:Int) => x * 2 + y
+val f = (x:Int, y:Int, op: ((Int,Int) => Int) ) => op(x,y)
+f(2,3,op1) 
+// will give 7
+~~~~
 
 <a name="collections-functions"></a>
 ### Collections functions
@@ -271,20 +257,52 @@ TODO: write this topic.
 <a name="-implicit-variable"></a>
 ### Implicit Variable
 
-WARNING: Not writed yet
-TODO: write this topic.
+Implicit variables are a mechanism to avoid always be passing some variable into a function, normally this is very useful on recursive functions.
+
+~~~~scala
+// also on this example we are using Scala string processing
+def f(name:String)(implicit location:String) = s"hello $name, you are at $location"
+implicit  val l = "lisbon"
+f("rui")
+// will give 'hello rui, you are at lisbon'
+f("rui")("porto")
+// will give 'hello rui, you are at porto'
+~~~~
+
+The value l is been declared as implicit of type String, when ever its needed a Implicit String the value l will be used.
+
+We can import implicit variable and use in other context:
+~~~~scala
+object o1{ implicit val i = 500}
+def f(implicit h:Int) = h * 2
+// importing the variable i
+import o1._
+// we are calling the function f (no parentheses need)
+// and with the result call toString
+printf(f.toString);
+~~~~
+
+Also we can have more than one variable as implicit input:
+
+~~~~scala
+def f(i:Int)(implicit k:Int, s:String):String = i match {
+  case 0 => s + k
+  case _ => f(i - 1)
+}
+implicit val i = 100;
+implicit val i = "i has ";
+f(50)
+~~~~
 
 <a name="-implicit-method"></a>
 ### Implicit Method
 
-WARNING: Not writed yet
-TODO: write this topic.
+Implicit methods are used to convert a variable into other
 
 <a name="-implicit-class"></a>
 ### Implicit Class
 
-WARNING: Not writed yet
-TODO: write this topic.
+Implicit class are used to lay methods in certain types
 
 <a name="scala-script"></a>
 ## Scala as a Script language

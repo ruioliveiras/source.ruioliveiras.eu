@@ -1,0 +1,18 @@
+extends /_layout_base.jade
+
+block summary
+  h2
+    | Summary
+  nav(class='nav')
+    ul(class='nav-list')
+      for val, key in public.posts._data['scala-tutorial-base'].summary
+        li(class='nav-item'): a.ros-cool-url(href="#{key}")= val.title
+        if val.sub
+          ul(class='nav-list')
+            for val2, key2 in val.sub
+              li(class='nav-item'): a.ros-cool-url(href="#{key2}")= val2.title
+
+    
+
+block content
+  include:markdown _scala-tutorial-base.md

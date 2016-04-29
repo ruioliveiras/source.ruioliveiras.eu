@@ -1,17 +1,70 @@
 {
-  "scala-tutorial-laboratory-1": {
-    "title": "Scala Language Laboratory",
-    "date": "March 2016",
-    "brief": "The description of the test post",
-    "tags": ["scala", "lab"],
-    "category": "programming"
-  },
   "scala-tutorial-base": {
     "title": "Scala Language Tutorial",
     "date": "March 2016",
     "brief": "This ",
     "tags": ["scala", "tutorial"],
-    "category": "programming"
+    "category": "programming",
+    "summary" : {
+      "#concepts" : { 
+        "title" : "Concepts" ,
+        "sub": {
+          "#mutability-ummitability" : { "title" : "Mutability and Immutability" },
+          "#singleton" : { "title" : "Singleton object" }
+        }
+      },
+      "#scala-oo" : {
+        "title" : "Scala as a Object Oriented Language",
+        "sub" : {
+          "#objects-class" : { "title" : "Objects and Class" },
+          "#traits" : { "title" : "Traits" },
+          "#case-class" : { "title" : "Case Class" },
+          "#generic-class" : { "title" : "Trait and Extension" },
+          "#generic-class" : { "title" : "Generic Class" }    
+        }
+      },
+      "#scala-functional" : { 
+        "title" : "Scala as a Functional language",
+        "sub" : {
+          "#var-val" : { "title" : "Var and Val" },
+          "#higter-order" : { "title" : "Higter order functions" },
+          "#collections-functions" : { "title" : "Collections functions" },
+          "#-implicit-variable" : { "title" : "Implicit Variable" },
+          "#-implicit-method" : { "title" : "Implicit Method" },
+          "#-implicit-class" : { "title" : "Implicit Class" }
+        }
+      },
+      "#scala-script" : { 
+        "title" : "Scala as a Script language" ,
+        "sub" : {
+          "#type-inference" : { "title" : "Type Inference" },
+          "#syntax-sugar" : { "title" : "Syntax Sugar" }    
+        }
+      },
+      "#scala-concurrency" : { 
+        "title" : "Scala Concurrency" ,
+        "sub"  : {
+          "#futures-promises" : { "title" : "Futures and Promises" },
+          "#todo" : { "title" :"todo: add topics here" }
+        }
+      },
+      "#scala-reflection" : { 
+        "title" : "Scala Reflection",
+        "sub" : {
+          "#universe" : { "title" : "Universe" },
+          "#todo2" : { "title" : "Add something here" }
+        }
+      },
+      "#scala-macros" : { 
+        "title" : "Scala Macros",
+        "sub" : {
+          "#whitebox-blackbox" : { "title" : "Whitebox and blackbox macros" },
+          "#annotations-macros" : { "title" : "Annotations Macros" }
+        }
+      },
+      "#scala-xml" : { "title" : "Scala XML" },
+      "#scala-string" : { "title" : "Scala String Processing" }
+    }
   },    
   "first-post": {
     "title": "This is a expirimental post",

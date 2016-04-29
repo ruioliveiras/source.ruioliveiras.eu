@@ -1,5 +1,54 @@
-p blablablabla
-ul
-  li: a(href="posts/") Posts
-  li: a(href="portfolio/") Portfolio
-  li: a(href="curriculum_en.pdf/") Curriculum Vitae
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='A layout example that shows off a responsive product landing page.')
+    title Landing Page – Layout Examples – Pure
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css')
+    // if lte IE 8
+    //   link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css')
+    //  [if gt IE 8] <!
+    // link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css')
+    //  <![endif]
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+    link(rel='stylesheet', href='css/home.css')
+    link(rel='stylesheet', href='css/blog.css')
+  body
+    //- .header
+    //-   .home-menu.pure-menu.pure-menu-horizontal.pure-menu-fixed
+    //-     a.pure-menu-heading(href='') Your Site
+    //-     ul.pure-menu-list
+    //-       li.pure-menu-item.pure-menu-selected
+    //-         a.pure-menu-link(href='#') Home
+    //-       li.pure-menu-item
+    //-         a.pure-menu-link(href='#') Tour
+    //-       li.pure-menu-item
+    //-         a.pure-menu-link(href='#') Sign Up
+    
+    .splash-container
+      .splash
+        h1.splash-head Rui Oliveiras
+        p.splash-subhead
+          | Welcome to my personal web-site.
+        p.pure-g
+          a.pure-u-1-4(href='/aboutme.html') About me
+          a.pure-u-1-4(href='/posts') My Blog
+          a.pure-u-1-4(href='/cv_en.pdf') CV
+          a.pure-u-1-4(href='https://bitbucket.org/ruioliveiras/') Portofolio
+      .splash-bottom This blog was made with <3 my myself, for it if you want. 
+    .content-wrapper
+      .content
+        h2.content-head.is-center 
+          | \/ - My last posts - \/
+        for post, key in public.posts._data
+          section(class='ros-post')
+            .content.content-head.is-center
+              img
+              h2: a(href='/posts/#{ key }.html')= post.title
+              div(class='ros-post-meta') 
+                | At #{ post.date } 
+                for tag in post.tags
+                  a(href='\##{ tag }' class='post-category post-category-#{ tag }')= tag
+            div(class='ros-post-decription')
+              p= post.brief 
+    
