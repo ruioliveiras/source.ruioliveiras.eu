@@ -1,6 +1,6 @@
 {
   "scala-tutorial-base": {
-    "url": "/post/scala-tutorial",
+    "url": "/post/scala-tutorial.html",
     "title": "Scala Language Tutorial",
     "date": "March 2016",
     "brief": "This ",
@@ -8,7 +8,7 @@
     "category": "programming"
   },
   "first-post": {
-    "url": "/post-simple/first-post",
+    "url": "/post-simple/first-post.html",
     "title": "This is a expirimental post",
     "date": "March 2016",
     "brief": "The description of my first expirimental test post",
