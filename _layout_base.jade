@@ -24,10 +24,25 @@ html(lang='en')
           nav(class='nav')
             ul(class='nav-list')
               li(class='nav-item'): a.ros-cool-url(href='/posts') Blog
-              li(class='nav-item'): a.ros-cool-url(href='/hotlinks.html') HotLinks
+              li(class='nav-item'): a.ros-cool-url(href='/post/hotlinks.html') HotLinks
               li(class='nav-item'): a.ros-cool-url(href='/aboutme.html') AboutMe 
-              li(class='nav-item'): a.ros-cool-url(href='/cv_en.pdf') Resume
+              li(class='nav-item'): a.ros-cool-url(href='/file/cv_en.pdf') Resume
               li(class='nav-item'): a.ros-cool-url(href='https://bitbucket.org/ruioliveiras/') Portofolio
+          block vars
+            - var summary = "empty" 
+          if summary != "empty"
+            h2.brand-tagline
+              | Summary
+            nav(class='nav')
+              ul(class='nav-list')
+                for val, key in summary
+                  li(class='nav-item'): a.ros-cool-url(href="#{key}")= val.title
+                  if val.sub
+                    ul(class='nav-list')
+                      for val2, key2 in val.sub
+                        li(class='nav-item'): a.ros-cool-url(href="#{key2}")= val2.title
+
+            
           block summary    
         a(href="#menu" id="menuLink" class="pure-u-4-24 menu-link"): span
       div(class='ros-content pure-u-1 pure-u-lg-16-24')

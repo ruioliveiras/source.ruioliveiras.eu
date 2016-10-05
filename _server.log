@@ -4,3 +4,14 @@ Harp v0.20.3 – Chloi Inc. 2012–2015
 Your server is listening at http://localhost:9000/
 Press Ctl+C to stop the server
 ------------
+Warning: missing space before text for line 33 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/_layout_base.jade"
+Warning: missing space before text for line 4 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/posts/scala-tutorial.jade"
+Warning: missing space before text for line 7 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/posts/scala-tutorial.jade"
+Warning: missing space before text for line 8 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/posts/scala-tutorial.jade"
+Warning: missing space before text for line 12 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/posts/scala-tutorial.jade"
+Warning: missing space before text for line 13 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/posts/scala-tutorial.jade"
+Warning: missing space before text for line 33 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/_layout_base.jade"
+Transformers.markdown is deprecated, you must replace the :markdown jade filter, with :marked and install jstransformer-marked before you update to jade@2.0.0.
+Warning: missing space before text for line 4 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/posts/scala-tutorial.jade"
+Warning: missing space before text for line 33 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/_layout_base.jade"
+Warning: missing space before text for line 33 of jade file "/home/ruioliveiras/Desktop/source.ruioliveiras.bitbucket.org/_layout_base.jade"

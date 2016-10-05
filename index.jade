@@ -30,7 +30,7 @@ html(lang='en')
         p.pure-g
           a.pure-u-1-4(href='/aboutme.html') About me
           a.pure-u-1-4(href='/posts') My Blog
-          a.pure-u-1-4(href='/cv_en.pdf') CV
+          a.pure-u-1-4(href='/files/cv_en.pdf') CV
           a.pure-u-1-4(href='https://bitbucket.org/ruioliveiras/') Portofolio
       .splash-bottom This blog was made with <3 my myself, for it if you want. 
     .content-wrapper
@@ -42,11 +42,11 @@ html(lang='en')
             section(class='ros-post')
               .content.content-head
                 img
-                h2: a(href='/posts/#{ key }.html')= post.title
+                h2: a(href='#{ post.url }')= post.title
                 div(class='ros-post-meta') 
                   | At #{ post.date } 
                   for tag in post.tags
                     a(href='\##{ tag }' class='post-category post-category-#{ tag }')= tag
-                    , 
+                    | , 
               div(class='ros-post-decription')
                 p= post.brief 
