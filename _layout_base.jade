@@ -10,12 +10,15 @@ html(lang='en')
     link(rel='stylesheet' href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css')
     link(rel='stylesheet' href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css')
     link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=EB+Garamond|Lobster|Sura')
-    link(rel='stylesheet' href='/css/blog.css')
+    //link(rel='stylesheet' href='/css/blog.css')
+    link(rel='stylesheet' href='/css/side-bar.css')
   body
     div(id='layout' class='pure-g active')
-      div(id='' class='ros-sidebar pure-u-1 pure-u-md-1-4')      
+      div(id='' class='ros-sidebar pure-u-1 pure-u-lg-8-24')      
         div(class='ros-sidebar-content pure-u-20-24')
-          h1(class='brand-title'): a.ros-super-cool-url(href='/') Rui Oliveiras
+          .brand-title.pure-g
+            .pure-u-2-5: img.pure-img(src="/img/me.jpg")
+            span.pure-u-3-5: a.brand-title-text.ros-super-cool-url(href='/') Rui <br> Oliveiras
           h2(class='brand-tagline') Menu
           nav(class='nav')
             ul(class='nav-list')
@@ -26,7 +29,7 @@ html(lang='en')
               li(class='nav-item'): a.ros-cool-url(href='https://bitbucket.org/ruioliveiras/') Portofolio
           block summary    
         a(href="#menu" id="menuLink" class="pure-u-4-24 menu-link"): span
-      div(class='ros-content pure-u-1 pure-u-md-3-4')
+      div(class='ros-content pure-u-1 pure-u-lg-16-24')
         block content
           div No content here, i'm sory..
         div(class='footer')

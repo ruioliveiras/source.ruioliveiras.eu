@@ -1,0 +1,119 @@
+@import "_paramters.less";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1, html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: @h1;
+    font-weight: 100;
+}
+
+.splash-container {
+    font-family: @h2 ;
+    //background-image: url('/black.png');
+    background-color: @b1;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+    //background: rgb(61, 79, 93);
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+
+    .splash {
+        /* absolute center .splash within .splash-container */
+        width: 80%;
+        height: 50%;
+        margin: auto;
+        position: absolute;
+        top: 0px; left: 0; bottom: 0; right: 0;
+        text-align: center;
+        //text-transform: uppercase;
+
+        a {
+            color: white;
+        }
+        a:link {text-decoration: none}
+        a:visited {text-decoration: none}
+        a:active {text-decoration: none}
+        a:hover {font-size:42; font-weight:bold; color: @p1;}
+
+        .splash-avatar {
+          height: 100px
+        }
+        /* This is the main heading that appears on the blue section */
+        .splash-head {
+           font-family: @h2 ;
+            font-size: 20px;
+            font-weight: bold;
+            color: @p1;
+            border: 3px solid white;
+            padding: 1em 1.6em;
+            font-weight: 100;
+            border-radius: 5px;
+            line-height: 1em;
+            //background-color: rgba(61, 79, 93, 0.44);
+            background-color: @b2;
+        }
+
+        /* This is the subheading that appears on the blue section */
+        .splash-subhead {
+            color: @s2;
+            letter-spacing: 0.05em;
+            //opacity: 0.8;
+        }
+    }
+
+    .splash-bottom {
+        position: absolute;
+        width: 80%;
+        height: 4em;
+        margin: auto;
+        z-index: 2;
+        left: 0; bottom: 0; right: 0;
+    }
+}
+@media (min-width: 48em) {
+
+    /* We increase the body font size */
+    body {
+        font-size: 16px;
+    }
+    /* We want to give the content area some more padding */
+    .content {
+        padding: 1em;
+    }
+
+    /* We increase the height of the splash-container */
+    .splash-container {
+        .splash {
+            width: 50%;
+            height: 50%;
+            .splash-avatar {
+              height: 120px
+            }
+        }
+
+
+        .splash-head {
+            font-size: 250%;
+        }
+
+    }
+
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+}
+
+// end splash

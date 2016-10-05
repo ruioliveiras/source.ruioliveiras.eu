@@ -11,19 +11,23 @@ html(lang='en')
     // link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css')
     //  <![endif]
     link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
-    link(rel='stylesheet', href='css/splash.css')
-    link(rel='stylesheet', href='css/floting-news.css')
-        
-    //link(rel='stylesheet', href='css/blog.css')
+    link(rel='stylesheet', href='css/home.css')
+    link(rel='stylesheet', href='css/blog.css')
   body
+    //- .header
+    //-   .home-menu.pure-menu.pure-menu-horizontal.pure-menu-fixed
+    //-     a.pure-menu-heading(href='') Your Site
+    //-     ul.pure-menu-list
+    //-       li.pure-menu-item.pure-menu-selected
+    //-         a.pure-menu-link(href='#') Home
+    //-       li.pure-menu-item
+    //-         a.pure-menu-link(href='#') Tour
+    //-       li.pure-menu-item
+    //-         a.pure-menu-link(href='#') Sign Up
+    
     .splash-container
-      .splash   
-        .splash-head.pure-g
-          div.pure-u-2-5
-            img.pure-img(src="/img/me.jpg")
-          div.pure-u-3-5
-            h1 Rui Oliveiras
-            h2 Soft. Engineer
+      .splash
+        h1.splash-head Rui Oliveiras
         p.splash-subhead
           | Welcome to my personal web-site.
         p.pure-g
@@ -36,16 +40,15 @@ html(lang='en')
       .content
         h2.content-head.is-center 
           | \/ - My last posts - \/
-        .ros-content
-          for post, key in public.posts._data
-            section(class='ros-post')
-              .content.content-head
-                img
-                h2: a(href='/posts/#{ key }.html')= post.title
-                div(class='ros-post-meta') 
-                  | At #{ post.date } 
-                  for tag in post.tags
-                    a(href='\##{ tag }' class='post-category post-category-#{ tag }')= tag
-                    , 
-              div(class='ros-post-decription')
-                p= post.brief 
+        for post, key in public.posts._data
+          section(class='ros-post')
+            .content.content-head.is-center
+              img
+              h2: a(href='/posts/#{ key }.html')= post.title
+              div(class='ros-post-meta') 
+                | At #{ post.date } 
+                for tag in post.tags
+                  a(href='\##{ tag }' class='post-category post-category-#{ tag }')= tag
+            div(class='ros-post-decription')
+              p= post.brief 
+    
