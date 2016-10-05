@@ -7,11 +7,12 @@ html(lang='en')
     block title
       title RuiOliveiras &ndash; Personal Blog
     link(rel='stylesheet' href='/js//lib/prism.css')
-    link(rel='stylesheet' href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css')
-    link(rel='stylesheet' href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css')
+    link(rel='stylesheet' href='/css/lib/pure.css')
+    link(rel='stylesheet' href='/css/lib/grids-responsive-min.css')
     link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=EB+Garamond|Lobster|Sura')
     //link(rel='stylesheet' href='/css/blog.css')
     link(rel='stylesheet' href='/css/side-bar.css')
+    link(rel='stylesheet' href='/css/base.css')
   body
     div(id='layout' class='pure-g active')
       div(id='' class='ros-sidebar pure-u-1 pure-u-lg-8-24')      
@@ -32,12 +33,12 @@ html(lang='en')
       div(class='ros-content pure-u-1 pure-u-lg-16-24')
         block content
           div No content here, i'm sory..
-        div(class='footer')
-        div(class='pure-menu pure-menu-horizontal')
-          ul
-            li(class='pure-menu-item'): a(href='/' class='pure-menu-link') cenas1
-            li(class='pure-menu-item'): a(href='/' class='pure-menu-link') cenas2
-            li(class='pure-menu-item'): a(href='/' class='pure-menu-link') cenas3
+        //div(class='footer')
+        //div(class='pure-menu pure-menu-horizontal')
+        //  ul
+        //    li(class='pure-menu-item'): a(href='/' class='pure-menu-link') cenas1
+        //    li(class='pure-menu-item'): a(href='/' class='pure-menu-link') cenas2
+        //    li(class='pure-menu-item'): a(href='/' class='pure-menu-link') cenas3
     script(src='/js/lib/prism.js')
     script(src='/js/ui.js')
     block script
