@@ -1,4 +1,12 @@
 {
+  "analogic-yashica": {
+    "url": "/photo/yashica.html",
+    "title": "Analogic Yashica",
+    "date": "2016",
+    "brief": "My old analogic Yashica fx3 super, it is old but take very cool photos",
+    "tags": ["photo"],
+    "category": "life"
+  },
   "scala-tutorial-base": {
     "url": "/post/scala-tutorial.html",
     "title": "Scala Language Tutorial",
