@@ -12,8 +12,8 @@ Searching the internet about this camera:
 
 > These inexpensive cameras have developed a reputation for **reliability**, mostly due to their extremely simple construction and durable metal chassis with plastic outer shell.    
 
-**Reliability** - it adis a very good way to define this camera, because after 10 years
-stored. It was just put frames and a batery (the battery is required for the photometer).
+**Reliability** - its a very good way to define this camera, because after 10 years
+stored. It was just put frames and a battery (the battery is required for the photometer).
 And the Camera was working, taking very good photos!!
 
 User Manual

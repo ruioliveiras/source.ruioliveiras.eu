@@ -1,4 +1,12 @@
 {
+  "books-movies": {
+    "url": "/post/booksAndMovies.html",
+    "title": "Books & Movies",
+    "date": "2016",
+    "brief": "Some notes about books or Movies that i have seen",
+    "tags": ["movie", "book"],
+    "category": "life"
+  },
   "analogic-yashica": {
     "url": "/photo/yashica.html",
     "title": "Analogic Yashica",
