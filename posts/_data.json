@@ -1,4 +1,12 @@
 {
+  "web-summit-2016":{
+    "url": "/post-simple/web-summit-2016.html",
+    "title": "Web Summit 2016",
+    "date": "2016",
+    "brief": "My expirience on the web summit",
+    "tags": ["tech"],
+    "category": "life"
+  },
   "books-movies": {
     "url": "/post/booksAndMovies.html",
     "title": "Books & Movies",
