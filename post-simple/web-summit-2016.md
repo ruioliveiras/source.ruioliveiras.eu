@@ -41,6 +41,5 @@ I think people like the idea and want this Saas4saaS. I will continue with more 
 
 
  ## Conclusion
-  **I think when where are in a place like web-summit we are not in Lisbon on in Dublin.
+  **I think when we are in a place like web-summit we are not in Lisbon on in Dublin.
   We are in the world**
-  
