@@ -4,3 +4,4 @@ Harp v0.20.3 – Chloi Inc. 2012–2015
 Your server is listening at http://localhost:9000/
 Press Ctl+C to stop the server
 ------------
+Transformers.markdown is deprecated, you must replace the :markdown jade filter, with :marked and install jstransformer-marked before you update to jade@2.0.0.
