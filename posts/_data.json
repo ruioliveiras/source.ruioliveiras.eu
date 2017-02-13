@@ -1,4 +1,12 @@
 {
+  "jvm-bytecode.html":{
+    "url": "/post-simple/jvm-bytecode.html",
+    "title": "Runtime JVM Bytecode manipulation",
+    "date": "2017",
+    "brief": "Java and Scala and other languages that compiles to JVM, are more dynamic that you may thing.",
+    "tags": ["tech"],
+    "category": "life"
+  },
   "web-summit-2016":{
     "url": "/post-simple/web-summit-2016.html",
     "title": "Web Summit 2016",
