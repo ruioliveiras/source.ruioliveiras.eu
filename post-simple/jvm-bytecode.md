@@ -11,7 +11,7 @@ The Full spessification can be found on the [Oracle, Chapter 2. The Structure of
 
  - Each java class or scala class will create a *'.class'* file.
    Note, in Scala each Lamda function will create  each own .class file, this is just a trick of the Scala compiler.
- - A goog way to underted the data releated to each '.class' is with ASM:
+ - A good way to understed the data releated to each '.class' is with ASM:
      - in the java ASM guide, go to section 2.1, Class / Structure  
  - Primitive types and Reference types,
       - in the JVM there exist two kind of types primitives and references.
