@@ -1,1 +1,1 @@
-sh -c 'git add -A ; git commit -m "source at $(date)" ; git push origin master; harp compile ; cd ../ruioliveiras.bitbucket.org; git add -A ; git commit -m "deploy at $(date)" ; git push origin master; git push origin2 master'
+sh -c 'git add -A ; git commit -m "source at $(date)" ; git push origin master; harp compile ; cd ../ruioliveiras; git add -A ; git commit -m "deploy at $(date)" ; git push origin master; git push origin2 master'
