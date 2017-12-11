@@ -18,26 +18,26 @@ The Full spessification can be found on the [Oracle, Chapter 2. The Structure of
 
  - Method Call Example
   Original Code
-  ~~~~java
+~~~~java
 public void m(Example a) {
-   this.hello((String) a.get("ola"));
+ this.hello((String) a.get("ola"));
 }
-  ~~~~
+~~~~
   The ASM code, you can generate something like this using ASMifier.
-  ~~~~scala
-  mv.visitVarInsn(ALOAD, 0)
-  //stack [this]
-  mv.visitVarInsn(ALOAD, 1); // put the first argument in the stack
-  // stack:[this, <1º argument>]
-  mv.visitLdcInsn("ola");
-  // stack:[this, <1º argument>, "ola"]
-  mv.visitMethodInsn(INVOKEVIRTUAL, "com/Example", "get", "(Ljava/lang/String;)Ljava/lang/Object;", false);
-  // will call method <1º argument>.get("ola")
-  // stack:[this, <result of get method>]
-  mv.visitTypeInsn(CHECKCAST, "java/lang/String");
-  mv.visitMethodInsn(INVOKEVIRTUAL, "com/Main", "hello", "(Ljava/lang/String;)Ljava/lang/String;", false);
-  // Stack: [<the result of hello>]
-  ~~~~
+~~~~scala
+mv.visitVarInsn(ALOAD, 0)
+//stack [this]
+mv.visitVarInsn(ALOAD, 1); // put the first argument in the stack
+// stack:[this, <1º argument>]
+mv.visitLdcInsn("ola");
+// stack:[this, <1º argument>, "ola"]
+mv.visitMethodInsn(INVOKEVIRTUAL, "com/Example", "get", "(Ljava/lang/String;)Ljava/lang/Object;", false);
+// will call method <1º argument>.get("ola")
+// stack:[this, <result of get method>]
+mv.visitTypeInsn(CHECKCAST, "java/lang/String");
+mv.visitMethodInsn(INVOKEVIRTUAL, "com/Main", "hello", "(Ljava/lang/String;)Ljava/lang/String;", false);
+// Stack: [<the result of hello>]
+~~~~
 
  - Instantiate new Varible
 ~~~~scala
@@ -56,6 +56,15 @@ public void m(Example a) {
  // call the constructor, the constructor is a special method called <init>
 ~~~~
 
+## Java class-loader
+
+How this '.class' files with byte code inside are loaded by the JVM? The answer is by the **classLoader.**
+
+On any object, you can do `.getClass()` this is the runtime representation of the Class. An if you pay attention that `Class` object has a method `.getClassLoader()`.
+
+[ClassLoader in the oracle documentation](https://docs.oracle.com/javase/7/docs/api/java/lang/ClassLoader.html)
+
+The most incredible thing is that you use custom class-loader to for example load `.jar` into your application in runtime [URLClassLoader](https://docs.oracle.com/javase/7/docs/api/java/net/URLClassLoader.html">uriClassLoader). Or store your `.class` in a [S3 class loader](https://github.com/RGBz/aws-s3-class-loader)
 
 ## Bytecode manipulation tools    
 

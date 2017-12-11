@@ -1,6 +1,14 @@
 {
+  "java9-overview":{
+    "url": "/p1/java9-overview.html",
+    "title": "Overview over Java9",
+    "date": "2017",
+    "brief": "An overview over java9 changes, with useful links",
+    "tags": ["tech"],
+    "category": "life"
+  },  
   "jvm-bytecode.html":{
-    "url": "/post-simple/jvm-bytecode.html",
+    "url": "/p1/jvm-bytecode.html",
     "title": "Runtime JVM Bytecode manipulation",
     "date": "2017",
     "brief": "Java and Scala and other languages that compiles to JVM, are more dynamic that you may thing.",
@@ -8,7 +16,7 @@
     "category": "life"
   },
   "web-summit-2016":{
-    "url": "/post-simple/web-summit-2016.html",
+    "url": "/p1/web-summit-2016.html",
     "title": "Web Summit 2016",
     "date": "2016",
     "brief": "My expirience on the web summit",
@@ -16,7 +24,7 @@
     "category": "life"
   },
   "books-movies": {
-    "url": "/post/booksAndMovies.html",
+    "url": "/p2/booksAndMovies.html",
     "title": "Books & Movies",
     "date": "2016",
     "brief": "Some notes about books or Movies that i have seen",
@@ -32,7 +40,7 @@
     "category": "life"
   },
   "scala-tutorial-base": {
-    "url": "/post/scala-tutorial.html",
+    "url": "/p2/scala-tutorial.html",
     "title": "Scala Language Tutorial",
     "date": "March 2016",
     "brief": "This ",
@@ -40,7 +48,7 @@
     "category": "programming"
   },
   "first-post": {
-    "url": "/post-simple/first-post.html",
+    "url": "/p1/first-post.html",
     "title": "This is a expirimental post",
     "date": "March 2016",
     "brief": "The description of my first expirimental test post",
