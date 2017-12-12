@@ -38,7 +38,7 @@ html(lang='en')
         h2.content-head.is-center 
           | \/ - My last posts - \/
         .ros-content
-          for post, key in public.posts._data
+          for post, key in public.posts._data.index.posts
             section(class='ros-post')
               .content.content-head
                 img

@@ -1,6 +1,7 @@
 {
+  "index":{"posts":{
   "java9-overview":{
-    "url": "/p1/java9-overview.html",
+    "url": "/p/java9-overview.html",
     "title": "Overview over Java9",
     "date": "2017",
     "brief": "An overview over java9 changes, with useful links",
@@ -8,7 +9,7 @@
     "category": "life"
   },  
   "jvm-bytecode.html":{
-    "url": "/p1/jvm-bytecode.html",
+    "url": "/p/jvm-bytecode.html",
     "title": "Runtime JVM Bytecode manipulation",
     "date": "2017",
     "brief": "Java and Scala and other languages that compiles to JVM, are more dynamic that you may thing.",
@@ -16,31 +17,15 @@
     "category": "life"
   },
   "web-summit-2016":{
-    "url": "/p1/web-summit-2016.html",
+    "url": "/p/web-summit-2016.html",
     "title": "Web Summit 2016",
     "date": "2016",
     "brief": "My expirience on the web summit",
     "tags": ["tech"],
     "category": "life"
   },
-  "books-movies": {
-    "url": "/p2/booksAndMovies.html",
-    "title": "Books & Movies",
-    "date": "2016",
-    "brief": "Some notes about books or Movies that i have seen",
-    "tags": ["movie", "book"],
-    "category": "life"
-  },
-  "analogic-yashica": {
-    "url": "/photo/yashica.html",
-    "title": "Analogic Yashica",
-    "date": "2016",
-    "brief": "My old analogic Yashica fx3 super, it is old but take very cool photos",
-    "tags": ["photo"],
-    "category": "life"
-  },
   "scala-tutorial-base": {
-    "url": "/p2/scala-tutorial.html",
+    "url": "/p/scala-tutorial.html",
     "title": "Scala Language Tutorial",
     "date": "March 2016",
     "brief": "This ",
@@ -48,11 +33,12 @@
     "category": "programming"
   },
   "first-post": {
-    "url": "/p1/first-post.html",
+    "url": "/p/first-post.html",
     "title": "This is a expirimental post",
     "date": "March 2016",
     "brief": "The description of my first expirimental test post",
     "tags": ["tutorial"],
     "category": "programming"
   }
+  }}
 }
