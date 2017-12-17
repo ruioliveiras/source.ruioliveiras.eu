@@ -28,10 +28,10 @@ Next, I have separated the main features in 3 Charters:  [Scala as a Object Orie
 I like to say that scala was the qualities of all kind paradigms.
 It is possible to take advantage of each paradigm.
  
-I the end I picked up some other topic: Reflection and Macros - this two things are still currently in experimental, but they are very cool and usable; 
+In the future I would like to pick some other topic: Reflection and Macros - this two things are still currently in experimental, but they are very cool and usable; 
 Concurrency  which in Scala is very intuitive; 
 Native XML scala feature;
-and some notes about string processing. 
+and notes about string processing. 
 
 This tutorial is currently beeing writed in my free times, so in the end there are some topics which are not writed yet .
    
@@ -133,7 +133,15 @@ ro3.dadNumber()
 ~~~~~
 Run scala intepretor in the shell (command 'scala'), and copy-paste this code.
 
-In scala a class don't have static methods or variables, what you can do is create a Object with the same name of the class.
+In scala a class don't have static methods or variables, what you can do is create a Object with the same name of the class, this object is called **Companion object**
+
+~~~~scala
+// The class
+class TheClass
+// The companion object
+oject TheClass
+// PERSONAL NOTE: need intepretor validation
+~~~~ 
 
 <a name="traits"></a>
 ### Traits
@@ -222,6 +230,23 @@ Creating a case class you will be access:
   * class will be immutable by default
   * default create singleton object with method unapplay and apply functions
 
+<a name="apply-unapply"></a>
+### Methods `apply` and `unapply`
+
+The methods `apply` and `unapply` are created in the companion object
+
+~~~~scala
+case class Person(name:String)
+
+object Person {
+  // methods create automaticly by case class:
+  // def apply(name:String) = new Person(name)
+  // def unapply()
+}
+
+
+// NEED intrepretor vadidation
+~~~~
 
 !explain !
 !Here explain the power of unapplay and apply!
@@ -445,74 +470,80 @@ TODO: write this topic.
 WARNING: Not writed yet
 TODO: write this topic.
 
-<a name="scala-cool"></a>
-## Scala as a cool language
+<!---
 
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="scala-concurrency"></a>
-### Scala Concurrency
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="futures-promises"></a>
-#### Futures and Promises
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="todo"></a>
-#### @todo: add topics here
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="scala-reflection"></a>
-### Scala Reflection
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="universe"></a>
-#### Universe
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="todo2"></a>
-#### Add something here
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="scala-macros"></a>
-### Scala Macros
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="whitebox-blackbox"></a>
-#### Whitebox and blackbox macros
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="annotations-macros"></a>
-#### Annotations Macros
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="scala-xml"></a>
-### Scala XML
-
-WARNING: Not writed yet
-TODO: write this topic.
-
-<a name="scala-string"></a>
-### Scala String Processing
-
-WARNING: Not writed yet
-TODO: write this topic.
+# ,"#scala-concurrency":{"title":"Scala Concurrency","sub":{"#futures-promises":{"title":"Futures and Promises"},"#todo":{"title":"todo: add topics here"}}},"#scala-reflection":{"title":"Scala Reflection","sub":{"#universe":{"title":"Universe"},"#todo2":{"title":"Add something here"}}},"#scala-macros":{"title":"Scala Macros","sub":{"#whitebox-blackbox":{"title":"Whitebox and blackbox macros"},"#annotations-macros":{"title":"Annotations Macros"}}},"#scala-xml":{"title":"Scala XML"},"#scala-string":{"title":"Scala String Processing"}   }
+ 
+# <a name="scala-cool"></a>
+# ## Scala as a cool language
+#
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="scala-concurrency"></a>
+# ### Scala Concurrency
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="futures-promises"></a>
+# #### Futures and Promises
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="todo"></a>
+# #### @todo: add topics here
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="scala-reflection"></a>
+# ### Scala Reflection
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="universe"></a>
+# #### Universe
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="todo2"></a>
+# #### Add something here
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="scala-macros"></a>
+# ### Scala Macros
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="whitebox-blackbox"></a>
+# #### Whitebox and blackbox macros
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="annotations-macros"></a>
+# #### Annotations Macros
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="scala-xml"></a>
+# ### Scala XML
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+# <a name="scala-string"></a>
+# ### Scala String Processing
+# 
+# WARNING: Not writed yet
+# TODO: write this topic.
+# 
+-->   
